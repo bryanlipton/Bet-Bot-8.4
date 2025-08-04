@@ -1,0 +1,60 @@
+🚀 Bet Bot Development Server
+===============================
+🔧 Starting in DEVELOPMENT mode...
+📦 Running tsx server/index.ts directly...
+Odds API initialized with key: 8a00e18a...
+🔑 Using working API key
+🔄 API call count reset to 0 and cache cleared
+🔑 API key configured - quota reset and cache cleared
+2025-07-24 02:03:00.476248: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Initializing Baseball AI model...
+🔍 Pick grading monitoring started - checking every 30 minutes for completed games
+⏰ Next daily pick generation scheduled for: 7/24/2025, 2:00:00 AM EST
+No existing model found, creating new model
+✅ Baseball AI model created successfully
+🔧 Starting application setup...
+📍 Development mode
+🛣️ Setting up routes...
+Registering scores routes...
+🚀 ================================
+🚀 Server running successfully!
+🚀 Port: 5000
+🚀 Host: 0.0.0.0
+🚀 Environment: development
+🚀 ================================
+🏥 Health check available at: /api/health
+🔄 Starting pick rotation service...
+🎯 Starting automatic pick grading service...
+🎯 Starting automatic pick grading service...
+🔄 Running automatic pick grading cycle...
+Starting pick grading for date: 2025-07-24
+✅ Application fully initialized and ready to serve requests!
+Found 0 completed games for 2025-07-24
+No completed games found for 2025-07-24
+Starting pick grading for date: 2025-07-23
+Found 12 completed games for 2025-07-23
+Found 0 pending picks to grade
+Graded 0 picks for 2025-07-23
+Starting pick grading for date: 2025-07-22
+Found 15 completed games for 2025-07-22
+Found 0 pending picks to grade
+Graded 0 picks for 2025-07-22
+Starting pick grading for date: 2025-07-21
+Found 15 completed games for 2025-07-21
+Found 0 pending picks to grade
+Graded 0 picks for 2025-07-21
+Starting pick grading for date: 2025-07-20
+Found 15 completed games for 2025-07-20
+Found 0 pending picks to grade
+Graded 0 picks for 2025-07-20
+Starting pick grading for date: 2025-07-19
+Found 15 completed games for 2025-07-19
+Found 0 pending picks to grade
+Graded 0 picks for 2025-07-19
+Starting pick grading for date: 2025-07-18
+Found 15 completed games for 2025-07-18
+Found 0 pending picks to grade
+Graded 0 picks for 2025-07-18
+📝 No pending picks found to grade
+2:03:04 AM [express] GET /api/health 200 in 3ms :: {"status":"healthy","timestamp":"2025-07-24T02:03…

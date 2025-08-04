@@ -1,0 +1,243 @@
+openapi: 3.1.0
+info:
+  title: Bet Bot Complete Knowledge API
+  description: AI-powered sports betting analytics with real-time data access and machine learning predictions
+  version: 1.0.0
+servers:
+  - url: https://bet-bot-blipton03.replit.app
+    description: Production Bet Bot API
+  - url: http://localhost:5000
+    description: Development server (if accessing locally)
+
+paths:
+  /api/gpt/test:
+    get:
+      operationId: test_all_endpoints
+      summary: Test all Custom GPT endpoints
+      description: Comprehensive test of all API connections and system status
+      responses:
+        '200':
+          description: System status and endpoint test results
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  overallStatus:
+                    type: string
+                  customGPTReady:
+                    type: boolean
+                  endpoints:
+                    type: object
+
+  /api/gpt/knowledge-base:
+    get:
+      operationId: get_complete_knowledge_base
+      summary: Get complete system knowledge
+      description: Access all model capabilities, training data, and system expertise
+      responses:
+        '200':
+          description: Complete knowledge base including model capabilities and betting expertise
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  modelCapabilities:
+                    type: object
+                  currentModel:
+                    type: object
+                  liveCapabilities:
+                    type: object
+                  bettingExpertise:
+                    type: object
+                  recentActivity:
+                    type: object
+                  dataFeeds:
+                    type: object
+
+  /api/gpt/live-recommendations:
+    get:
+      operationId: get_live_recommendations
+      summary: Get live betting recommendations
+      description: Real-time betting analysis with detailed edge calculations and AI predictions
+      responses:
+        '200':
+          description: Live betting recommendations with detailed market analysis
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  totalGames:
+                    type: integer
+                  recommendations:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        game:
+                          type: object
+                        aiAnalysis:
+                          type: object
+                        marketAnalysis:
+                          type: object
+                        recommendation:
+                          type: string
+
+  /api/gpt/model-info:
+    get:
+      operationId: get_complete_model_info
+      summary: Get AI model information
+      description: Detailed information about the baseball AI model, training data, and performance metrics
+      responses:
+        '200':
+          description: Complete AI model information and performance data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  architecture:
+                    type: object
+                  performance:
+                    type: object
+                  trainingData:
+                    type: object
+                  predictionCapabilities:
+                    type: object
+                  latestTraining:
+                    type: object
+
+  /api/gpt/matchup:
+    post:
+      operationId: predict_game_outcome  
+      summary: Get AI prediction for team matchup
+      description: Generate AI prediction for any MLB team matchup with confidence scores and betting recommendations
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                homeTeam:
+                  type: string
+                  description: Home team name (e.g., Yankees, Braves)
+                awayTeam:
+                  type: string
+                  description: Away team name (e.g., Yankees, Braves)
+              required:
+                - homeTeam
+                - awayTeam
+
+      responses:
+        '200':
+          description: AI prediction with probabilities and betting recommendation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  homeTeam:
+                    type: string
+                  awayTeam:
+                    type: string
+                  prediction:
+                    type: object
+                    properties:
+                      homeWinProbability:
+                        type: number
+                      awayWinProbability:
+                        type: number
+                      confidence:
+                        type: number
+                      recommendedBet:
+                        type: string
+                      edge:
+                        type: string
+                      analysis:
+                        type: string
+                  timestamp:
+                    type: string
+                  modelStatus:
+                    type: string
+
+  /api/gpt/strategies:
+    get:
+      operationId: get_betting_strategies
+      summary: Get current betting strategies
+      description: Live betting strategies with performance metrics
+      responses:
+        '200':
+          description: Current betting strategies and performance data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  strategies:
+                    type: array
+                    items:
+                      type: object
+                  performance:
+                    type: object
+                  lastUpdated:
+                    type: string
+
+  /api/gpt/results:
+    get:
+      operationId: get_backtest_results
+      summary: Get latest backtest results
+      description: Historical backtest performance using real MLB data
+      responses:
+        '200':
+          description: Latest backtest results with authentic game outcomes
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  period:
+                    type: string
+                  totalBets:
+                    type: integer
+                  accuracy:
+                    type: number
+                  profitLoss:
+                    type: number
+                  roi:
+                    type: number
+                  summary:
+                    type: string
+
+  /api/gpt/betting-glossary:
+    get:
+      operationId: get_betting_glossary
+      summary: Get betting terminology
+      description: Complete betting glossary and terminology reference
+      responses:
+        '200':
+          description: Betting terminology and definitions
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  terms:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        term:
+                          type: string
+                        definition:
+                          type: string
+                        category:
+                          type: string
+                  categories:
+                    type: array
+                    items:
+                      type: string
